@@ -68,3 +68,42 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
+
+/* --- ESTILOS DA IMAGEM E OPINIÃO --- */
+.capa-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagem-principal {
+    width: 100%;
+    max-width: 800px; /* Limita o tamanho da foto */
+    height: auto;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra elegante */
+}
+
+.legenda {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.texto-opiniao {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin: 20px 0;
+    border-left: 4px solid #ffd700; /* Detalhe amarelo na lateral da opinião */
+    padding-left: 20px;
+}
+
+.lista-reportagens {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.lista-reportagens li {
+    margin-bottom: 10px;
+}
