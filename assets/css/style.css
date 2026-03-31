@@ -19,6 +19,34 @@ header {
     text-align: center;
 }
 
+/* ... código que já existe acima ... */
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* COLOQUE O NOVO CÓDIGO AQUI EMBAIXO */
+nav ul {
+    list-style: none !important;
+    padding: 0;
+    margin-top: 15px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffd700 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 main {
     padding: 2rem;
     max-width: 800px;
