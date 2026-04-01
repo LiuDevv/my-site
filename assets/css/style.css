@@ -198,3 +198,28 @@ html {
 .prev { left: 0; }
 
 .prev:hover, .next:hover { background: #0056b3; }
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
