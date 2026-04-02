@@ -290,3 +290,19 @@ html {
         grid-template-columns: 1fr; /* No celular, vira uma coluna só */
     }
 }
+@media (min-width: 769px) {
+    .card-menor {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .card-menor img {
+        width: 120px; /* Fixa um tamanho para a miniatura */
+        height: 80px;
+    }
+}
+.destaque-principal h1:hover, .card-menor h3:hover {
+    color: #c4170c;
+    cursor: pointer;
+    text-decoration: underline;
+}
