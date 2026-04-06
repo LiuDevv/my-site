@@ -37,6 +37,23 @@
         </div>
     </div>
 </header>
+<section class="barra-cotacao">
+    <div class="cotacao-container">
+        <div class="item-cotacao">
+            <span class="label">DÓLAR:</span>
+            <span class="valor" id="dolar-valor">R$ 5,10</span> 
+            <span class="tendencia alta">▲</span>
+        </div>
+        <div class="item-cotacao">
+            <span class="label">BITCOIN:</span>
+            <span class="valor" id="btc-valor">R$ 350.000</span>
+            <span class="tendencia baixa">▼</span>
+        </div>
+        <div class="cotacao-tempo">
+            <i class="fas fa-sync-alt"></i> Tempo Real
+        </div>
+    </div>
+</section>
     <main>
    <section class="grid-g1">
     <div class="destaque-principal">
@@ -112,5 +129,29 @@
 <a href="https://wa.me/5521000000000" class="whatsapp-link" target="_blank">
    <i class="fab fa-whatsapp"></i>
 </a>
+<script>
+        async function atualizarCotacoes() {
+            try {
+                // Busca os dados reais da API
+                const response = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,BTC-BRL');
+                const data = await response.json();
+
+                // Atualiza o Dólar
+                const dolar = parseFloat(data.USDBRL.bid).toFixed(2);
+                document.getElementById('dolar-valor').innerText = `R$ ${dolar}`;
+
+                // Atualiza o Bitcoin formatado
+                const btcRaw = parseFloat(data.BTCBRL.bid);
+                const btcFormatado = btcRaw.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                document.getElementById('btc-valor').innerText = btcFormatado;
+
+            } catch (error) {
+                console.error("Erro ao buscar cotações:", error);
+            }
+        }
+
+        atualizarCotacoes();
+        setInterval(atualizarCotacoes, 30000); // Atualiza a cada 30 segundos
+    </script>
 </body>
 </html>
